@@ -1,43 +1,16 @@
-\frametitle{Strands in P-Fib}
-	Bu / Eu : Begin strand u / End strand u
-	\begin{columns}[T]
-		\begin{column}{.8\textwidth}
-
-
-
-
-	\begin{lstlisting}[style=CStyle]
+\frametitle{Vb met P-Fib}
 	P-Fib(n)
-	/*Bu*/
+	\begin{lstlisting}[style=CStyle]
 	if n <= 1
 	return n
 	else
-	x = /*Eu*/ spawn /*Bv*/ P-Fib(n-1) /*Ev*/
-	/*Bu'*/
-	y = /*Eu'*/ /*Bv'*/ P-Fib(n-2)
-	/*Ev'*/
+	x = spawn P-Fib(n-1)
+	y = P-Fib(n-2)
 	sync
-	return /*Bx*/ x + y /*Ex*/\end{lstlisting}
+	return x + y
+	\end{lstlisting}
 
-\end{column}
-
-\begin{column}{.2\textwidth}
-	\pause
-	\textbf{Bogen\\ $(i \leqslant 2)$:}
-	\\ \pause
-	-Spawn $(u,v)$
-	\\ \pause
-	-Cont $(u,u')$
-	\\ \pause
-	-Call $(u',v')$
-	\\ \pause
-	-Return $(v,x)$ $(v',x)$
-
-
-	\pause
-
-	$\ast$  sync in return --> Parallel keyword
-\end{column}
-
-\end{columns}
+	~\\In serie: $T(n) = T(n-1) + T(n-2) + \Theta(1)$ \\~\\
+	Work = $T_1 (n) = \Theta(\phi^n)$ uit vorige\\ met
+	$\phi = (1 + \sqrt{5})/2$ de `gouden ratio'
 

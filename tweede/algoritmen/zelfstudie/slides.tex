@@ -121,7 +121,8 @@
 \begin{frame}[fragile]
 	\frametitle{Voorbeeld}
 	
-	Voorbeeld m.b.v. (slechte) recursieve Fibonacci ( $\Theta$(F\textsubscript{n}) )
+	Voorbeeld m.b.v. (slechte) recursieve Fibonacci $= \Theta(\phi^n)$ \\ met
+	$\phi = (1 + \sqrt{5})/2$ de `gouden ratio'
 	
 	
 	
@@ -649,6 +650,51 @@ $\rightarrow$ te weinig voor onderbenutting
 \end{frame}
 
 \section[Analyse]{Analyseren van een algoritme}
+
+\begin{frame}
+	\frametitle{Analyseren van een algoritme}
+	\begin{enumerate}
+		\item \textbf{\textit{Work}}: Hetzelfde zoals seriële algoritmen.
+		\pause
+		\itemsep=3em
+		\item \textbf{\textit{Span}}: Wordt nu besproken.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Vb met P-Fib}
+	P-Fib(n)
+	\begin{lstlisting}[style=CStyle]
+	if n <= 1
+	return n
+	else 
+	x = spawn P-Fib(n-1)
+	y = P-Fib(n-2)
+	sync
+	return x + y
+	\end{lstlisting}
+	
+	~\\In serie: $T(n) = T(n-1) + T(n-2) + \Theta(1)$ \\~\\
+	Work = $T_1 (n) = \Theta(\phi^n)$ uit vorige\\ met
+	$\phi = (1 + \sqrt{5})/2$ de `gouden ratio'
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vb met P-Fib}
+	\includegraphics[width=\textwidth]{fig3.jpg}
+	\\Span: als 2 strands in serie staan worden ze opgeteld. \\ In parallel wordt het maximum opgeteld bij de span. \pause \\
+	$\rightarrow T_\infty (n) = \max(T_\infty (n-1),T_\infty (n-2)) + \Theta(1)$\\
+	$\rightarrow T_\infty (n) = T_\infty (n-1) + \Theta(1)$ \\
+	$\rightarrow T_\infty (n) = \Theta(n)$\\~\\
+	\pause 
+	Parallellisme $= \frac{T_1 (n)}{T_\infty (n)} = \Theta(\frac{\phi^n}{n})$ wordt zeer groot als n groeit \\$\rightarrow$ al snel baat bij veel processors als n groeit
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Parallel loops}
+\end{frame}
 
 \section[Matrix]{Matrix vermenigvuldiging}
 
