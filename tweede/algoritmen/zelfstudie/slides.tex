@@ -536,7 +536,9 @@ else
 \item
  [Algemeen]: Een scheduler beslist of er een thread aangemaakt wordt bij een spawn en mapped op static string.\\Beslissing hangt af van momentele belasting computer.\\~\\ 
 \end{description}
-$\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zorgt voor trashing)
+$\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren:\\
+$\rightarrow$ te veel zorgt voor trashing \\
+$\rightarrow$ te weinig voor onderbenutting
 \end{frame}
 
 \begin{frame}
@@ -612,7 +614,7 @@ $\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zor
 
 \begin{frame}
 	\frametitle{Gevolg 27.2}
-	Stel zelfde aannames stelling 27.2, dan is $T_P$ maximum 2 keer de optimale tijd. \pause \\~\\
+	Stel zelfde aannames stelling 27.1, dan is $T_P$ maximum 2 keer de optimale tijd. \pause \\~\\
 	\textbf{Bewijs}\\
 	Stel $T_P^*$ optimale tijd\\
 	$\Rightarrow T_P  \leqslant \frac{T_1}{P} + T_\infty \leqslant 2\cdot\max(\frac{T_1}{P} , T_\infty)$ (27.1)
@@ -628,6 +630,22 @@ $\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zor
 
 \begin{frame}
 	\frametitle{Gevolg 27.3}
+	Stel zelfde aannames stelling 27.1 .
+	\\ Als $P << \frac{T_1}{T_\infty} =$ slackness, dan $T_P \approx \frac{T_1}{P} $ \\
+	Dus de speedup $\approx P$ en dus bijna perfect lineair.\\ $<< \approx$ 10 keer zo groot, dan is $T_\infty$ in $T_P \leqslant \frac{T_1}{P} + T_\infty$ kleiner dan 10\% van $\frac{werk}{processor}$  \pause \\~\\
+	\textbf{Bewijs} ~~~~~~~
+	Stel $P << \frac{T_1}{T_\infty}$ \\
+	$\Rightarrow T_\infty << \frac{T_1}{P} $ \\
+	$\Rightarrow \frac{T_1}{P} + T_\infty \approx \frac{T_1}{P} $ \\
+	\[
+		\begin{cases}
+			\frac{T_1}{P} + T_\infty \approx \frac{T_1}{P} & \\
+			T_P \leqslant \frac{T_1}{P} + T_\infty & \text{(27.1)}  \\
+			T_P \geqslant \frac{T_1}{P} & \text{work law}
+		\end{cases}
+	\]
+	$\Rightarrow T_P \approx \frac{T_1}{P} \Rightarrow \frac{T_1}{T_P}\approx P$ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ $\Box$
+	
 \end{frame}
 
 \section[Analyse]{Analyseren van een algoritme}

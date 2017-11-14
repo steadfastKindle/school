@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.15)  14 NOV 2017 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.15)  14 NOV 2017 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1710,7 +1710,7 @@ Package pdftex.def Info: kulakOutline.pdf used on input line 531.
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 540.
+Package pdftex.def Info: kulakBackground.pdf used on input line 542.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [58
 
@@ -1718,14 +1718,14 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 540.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 549.
+Package pdftex.def Info: kulakBackground.pdf used on input line 551.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [59
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 558.
+Package pdftex.def Info: kulakBackground.pdf used on input line 560.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [60
 
@@ -1733,14 +1733,14 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 558.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 584.
+Package pdftex.def Info: kulakBackground.pdf used on input line 586.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [61
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 584.
+Package pdftex.def Info: kulakBackground.pdf used on input line 586.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [62
 
@@ -1748,14 +1748,14 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 584.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 584.
+Package pdftex.def Info: kulakBackground.pdf used on input line 586.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [63
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 602.
+Package pdftex.def Info: kulakBackground.pdf used on input line 604.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [64
 
@@ -1763,14 +1763,14 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 602.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 602.
+Package pdftex.def Info: kulakBackground.pdf used on input line 604.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [65
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 602.
+Package pdftex.def Info: kulakBackground.pdf used on input line 604.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [66
 
@@ -1778,14 +1778,14 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 602.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 611.
+Package pdftex.def Info: kulakBackground.pdf used on input line 613.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [67
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 627.
+Package pdftex.def Info: kulakBackground.pdf used on input line 629.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [68
 
@@ -1793,69 +1793,76 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 627.
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 627.
+Package pdftex.def Info: kulakBackground.pdf used on input line 629.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [69
 
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 631.
+Package pdftex.def Info: kulakBackground.pdf used on input line 649.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [70
 
-] (./slides.toc)
-File: kulakOutline.pdf Graphic file (type pdf)
+]
+File: kulakBackground.pdf Graphic file (type pdf)
 
-<use kulakOutline.pdf>
-Package pdftex.def Info: kulakOutline.pdf used on input line 633.
+<use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 649.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [71
 
 ] (./slides.toc)
 File: kulakOutline.pdf Graphic file (type pdf)
  <use kulakOutline.pdf>
-Package pdftex.def Info: kulakOutline.pdf used on input line 635.
+Package pdftex.def Info: kulakOutline.pdf used on input line 651.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [72
 
 ]
-File: kulakBackground.pdf Graphic file (type pdf)
-
-<use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 640.
+(./slides.toc)
+File: kulakOutline.pdf Graphic file (type pdf)
+ <use kulakOutline.pdf>
+Package pdftex.def Info: kulakOutline.pdf used on input line 653.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [73
 
-] (./slides.toc)
-File: kulakOutline.pdf Graphic file (type pdf)
- <use kulakOutline.pdf>
-Package pdftex.def Info: kulakOutline.pdf used on input line 642.
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+ <use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 658.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [74
 
 ]
-File: kulakBackground.pdf Graphic file (type pdf)
-
-<use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 647.
+(./slides.toc)
+File: kulakOutline.pdf Graphic file (type pdf)
+ <use kulakOutline.pdf>
+Package pdftex.def Info: kulakOutline.pdf used on input line 660.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [75
 
-] (./slides.toc)
-File: kulakOutline.pdf Graphic file (type pdf)
- <use kulakOutline.pdf>
-Package pdftex.def Info: kulakOutline.pdf used on input line 649.
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+ <use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 665.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [76
 
 ]
-File: kulakBackground.pdf Graphic file (type pdf)
-
-<use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 653.
+(./slides.toc)
+File: kulakOutline.pdf Graphic file (type pdf)
+ <use kulakOutline.pdf>
+Package pdftex.def Info: kulakOutline.pdf used on input line 667.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [77
+
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+ <use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 671.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [78
 
 ]
 \tf@nav=\write6
@@ -1867,20 +1874,21 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 653.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 655.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 655.
- (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 655.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 655.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 673.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 673.
+
+(./slides.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 673.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 673.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: B470429120FEA3099CDC2B62564273CF;426.
  ) 
 Here is how much of TeX's memory you used:
- 20026 strings out of 493013
- 359952 string characters out of 6135681
- 529943 words of memory out of 5000000
- 22906 multiletter control sequences out of 15000+600000
- 55543 words of font info for 74 fonts, out of 8000000 for 9000
+ 20031 strings out of 493013
+ 359996 string characters out of 6135681
+ 529978 words of memory out of 5000000
+ 22908 multiletter control sequences out of 15000+600000
+ 56760 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,68p,795b,1680s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1895,10 +1903,10 @@ ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on slides.pdf (77 pages, 943556 bytes).
+Output written on slides.pdf (78 pages, 947172 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 1176 compressed objects within 12 object streams
- 163 named destinations out of 1000 (max. 500000)
+ 1348 PDF objects out of 1440 (max. 8388607)
+ 1189 compressed objects within 12 object streams
+ 165 named destinations out of 1000 (max. 500000)
  127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

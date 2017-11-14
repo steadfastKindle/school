@@ -3,7 +3,7 @@
 \beamer@sectionintoc {2}{Basis van multithreading}{10}{0}{2}
 \beamer@sectionintoc {3}{Meeteenheden prestatie}{38}{0}{3}
 \beamer@sectionintoc {4}{Scheduling van threads}{57}{0}{4}
-\beamer@sectionintoc {5}{Analyseren van een algoritme}{71}{0}{5}
-\beamer@sectionintoc {6}{Matrix vermenigvuldiging}{72}{0}{6}
-\beamer@sectionintoc {7}{Merge sort}{74}{0}{7}
-\beamer@sectionintoc {8}{Besluit}{76}{0}{8}
+\beamer@sectionintoc {5}{Analyseren van een algoritme}{72}{0}{5}
+\beamer@sectionintoc {6}{Matrix vermenigvuldiging}{73}{0}{6}
+\beamer@sectionintoc {7}{Merge sort}{75}{0}{7}
+\beamer@sectionintoc {8}{Besluit}{77}{0}{8}
