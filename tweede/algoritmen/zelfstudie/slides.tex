@@ -94,8 +94,8 @@
 \begin{frame}
 	\frametitle{Dynamic threading}
 	
-	Toegankelijke vorm van threading.\\
-	Scheduler beslist hoeveel threads wanneer.
+	Toegankelijke vorm van threading met enorm potentieel.\\
+	Scheduler beslist hoeveel threads wanneer.\\ IPV thread maken, thread suggereren.
 	
 	 
 	
@@ -177,7 +177,7 @@
 		\pause
 		
 		
-		\item[\textbf{spawn}] Nested-parallism (child kan andere threads oproepen)
+		\item[\textbf{spawn}] Geeft aan dat de subroutine parallel kan worden uitgevoerd. Nested-parallism mogelijk (child kan andere threads oproepen).
 		
 		\pause
 		\itemsep=2em
@@ -245,7 +245,7 @@ else
 
 
 \begin{frame}
-	\frametitle{Voorstelling multithreading}
+	\frametitle{Voorstelling multithreaded algoritme}
 	\pause
 	Gerichte kringloze graaf G(V,E) \\ (`Computation dag')
 	
@@ -486,13 +486,13 @@ else
 	\pause
 	3 interpretaties:
 	\begin{enumerate}
-		\item \textit{Ratio}: gemiddeld werk per stap in langste pad vergeleken met work (T\textsubscript{$\infty$} = span)
+		\item \textit{Ratio}: gemiddeld werk per stap in langste pad vergeleken met gemiddelde werk per stap van $T_1$ ( = work en langste pad = span)
 		
 		\pause
 		\item \textit{Bovengrens}: maximum speedup
 		
 		\pause
-		\item \textit{Mogelijkheid perfect lineair}: Indien \# processoren groter is dan parallellisme, geen perfecte lineariteit mogelijk. 
+		\item \textit{Mogelijkheid perfect lineair}: Indien \# processoren Q groter is dan parallellisme, geen perfecte lineariteit mogelijk. (want $T_Q \geqslant T_\infty$)
 	\end{enumerate}
 \end{frame}
 
@@ -522,17 +522,44 @@ else
 \begin{frame}
 	\frametitle{Slackness}
 	Verhouding tussen parallellisme algoritme en computer met P processors\\~\\
-	$ (T\textsubscript{1}/T$\textsubscript{$\infty$}$)/P =  T\textsubscript{1}/PT$\textsubscript{$\infty$} ~\\~\\
-	\textit{`Hoeveel meer parallellisme dan processors'}\\~\\
+	$\frac{parallellisme}{P} = \frac{T\textsubscript{1}/T_\infty}{P} =  \frac{T\textsubscript{1}}{PT_\infty}$ ~\\~\\
+	\textit{`Hoeveel meer/minder parallellisme dan processors'}\\~\\
 	Onder 1 $\rightarrow$ meer processors dan parallellisme $\rightarrow$ niet perfect lineair \\~\\
-	Boven 1 $\rightarrow$ minder processors dan parallellisme $\rightarrow$ mogelijks perfect lineair \\ Processors zijn hierbij de limiterende factor
+	Boven 1 $\rightarrow$ minder processors dan parallellisme $\rightarrow$ mogelijks perfect lineair \\ $\Rightarrow$Processors zijn hierbij de limiterende factor
 \end{frame}
 
 \section[Scheduling]{Scheduling van threads}
 
 \begin{frame}
 \frametitle{Scheduling}
-$\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren
+\begin{description}
+\item
+ [Algemeen]: Een scheduler beslist of er een thread aangemaakt wordt bij een spawn en mapped op static string.\\Beslissing hangt af van momentele belasting computer.\\~\\ 
+\end{description}
+$\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zorgt voor trashing)
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kenmerken beschouwde scheduler}
+	\begin{description}
+		\item[\textbf{Centralized}] De scheduler weet op ieder moment de load van de computer.
+		\item[\textbf{Greedy}] De scheduler creëert zoveel mogelijk threads bij iedere stap.
+		\item[Complete stap] Er zijn P strands klaar om uit te voeren. Minder is incomplete.
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Perfomance greedy schedular}
+	\textbf{Stelling 27.1}\\
+	Gegeven een ideale parallelle computer met $P$ processors, een greedy scheduler en een algoritme met span = $T_\infty$ en work = $T_1$\\
+	$\Rightarrow T_P \leqslant \frac{T_1}{P} + T_\infty$ \\~\\~\\
+	Bovengrens work law = $T_P \leqslant \frac{T_1}{P}$ en span law $T_P \leqslant T_\infty$ \\
+	$\rightarrow$ Niet slecht.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bewijs stelling 27.1}
+	
 \end{frame}
 
 \section[Analyse]{Analyseren van een algoritme}
