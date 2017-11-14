@@ -1,0 +1,43 @@
+\frametitle{Strands in P-Fib}
+	Bu / Eu : Begin strand u / End strand u
+	\begin{columns}[T]
+		\begin{column}{.8\textwidth}
+
+
+
+
+	\begin{lstlisting}[style=CStyle]
+	P-Fib(n)
+	/*Bu*/
+	if n <= 1
+	return n
+	else
+	x = /*Eu*/ spawn /*Bv*/ P-Fib(n-1) /*Ev*/
+	/*Bu'*/
+	y = /*Eu'*/ /*Bv'*/ P-Fib(n-2)
+	/*Ev'*/
+	sync
+	return /*Bx*/ x + y /*Ex*/\end{lstlisting}
+
+\end{column}
+
+\begin{column}{.2\textwidth}
+	\pause
+	\textbf{Bogen\\ $(i \leqslant 2)$:}
+	\\ \pause
+	-Spawn $(u,v)$
+	\\ \pause
+	-Cont $(u,u')$
+	\\ \pause
+	-Call $(u',v')$
+	\\ \pause
+	-Return $(v,x)$ $(v',x)$
+
+
+	\pause
+
+	$\ast$  sync in return --> Parallel keyword
+\end{column}
+
+\end{columns}
+
