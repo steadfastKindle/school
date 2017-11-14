@@ -544,7 +544,7 @@ $\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zor
 	\begin{description}
 		\item[\textbf{Centralized}] De scheduler weet op ieder moment de load van de computer.
 		\item[\textbf{Greedy}] De scheduler creëert zoveel mogelijk threads bij iedere stap.
-		\item[Complete stap] Er zijn P strands klaar om uit te voeren. Minder is incomplete.
+		\item[Complete stap] Er zijn P strands klaar om uit te voeren op ieder tijds stap. Minder is incomplete.
 	\end{description}
 \end{frame}
 
@@ -559,7 +559,75 @@ $\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zor
 
 \begin{frame}
 	\frametitle{Bewijs stelling 27.1}
+	\begin{itemize}
+		\item [1)] \textbf{Complete stap}\\
+		P processors $\Rightarrow P \frac{werk}{stap}$ \\
+		Stel aantal complete stappen $> \lfloor T_1/P\rfloor$
+		\pause \\
+		$\Rightarrow$ dan is het total werk minstens
+		
+		
+		\begin{equation} 
+		\begin{split}
+		P\cdot (\lfloor T_1 /P\rfloor + 1) & = P\cdot\lfloor T_1 /P\rfloor + P  \\
+		& = T_1 - (T_1 \mod P) + P \\
+		& > T_1  
+		\end{split}
+		\end{equation}
+		
+		*\textit{want: $a\mod n = a - n\lfloor a/n\rfloor$}\\
+		**\textit{want:  $0 \leqslant a\mod n < n$} \\ ~ \\
+		\pause
+		\textbf{\textit{CONTRADICTIE:}} meer werk dan $T_1$\\$ \Rightarrow$ aantal complete stappen $\leqslant \lfloor T_1 /P\rfloor$ \\
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bewijs stelling 27.1}
+	\begin{itemize}
+		\item[2)] \textbf{Incomplete stap}\\ 
+		Stel graaf G de graaf die het algoritme voorstelt:
+		\\ Maak alle bogen gewicht 1 door langere bogen op te splitsen.\\
+		\pause
+		$\rightarrow$ G' subgraaf uit te voeren voor de incomplete stap  \\
+		$\rightarrow$ G'' uit te voeren erna\\
+		$\rightarrow$ Startknoop cruciaal pad geen inkomende bogen = uitvoerbaar (anders niet start)\\
+		\pause
+		$\Rightarrow$ Incomplete stap voert alle zulke bogen uit in G' \\(want minder dan P strands en greedy ) \\
+		$\Rightarrow$ Lengte cruciale pad G'' 1 korter dan van G'\\
+		$\Rightarrow$ Span = Span - 1 na stap\\
+		$\Rightarrow$ Aantal incomplete stappen $\leqslant$ span $= T_\infty$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bewijs stelling 27.1}
 	
+	$T_P =$ \# complete + \# incomplete stappen $= \lfloor T_1 /P\rfloor + T_\infty$ \\~\\
+	$\Rightarrow T_P \leqslant \lfloor T_1 /P\rfloor + T_\infty$\\
+	\flushright{$\Box$}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gevolg 27.2}
+	Stel zelfde aannames stelling 27.2, dan is $T_P$ maximum 2 keer de optimale tijd. \pause \\~\\
+	\textbf{Bewijs}\\
+	Stel $T_P^*$ optimale tijd\\
+	$\Rightarrow T_P  \leqslant \frac{T_1}{P} + T_\infty \leqslant 2\cdot\max(\frac{T_1}{P} , T_\infty)$ (27.1)
+	\[
+		\begin{cases}
+		 T_P  \leqslant 2\cdot\max(\frac{T_1}{P} , T_\infty) & \\
+		 T_P^* \geqslant \max(\frac{T_1}{P} , T_\infty) & \text{work en span law}
+		\end{cases}
+	\]
+	$\Rightarrow T_P \leqslant 2T_P^*$
+	\flushright{$\Box$}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gevolg 27.3}
 \end{frame}
 
 \section[Analyse]{Analyseren van een algoritme}
@@ -581,7 +649,7 @@ $\triangleright$ Waarom? \\~\\ Strands efficiënt parallel uitvoeren (teveel zor
 \section{Besluit}
 \begin{frame}
 \frametitle{Afsluitende frame}
-Afsluitende tekst.
+Dynamic programming voorziet niet enkel een betere manier, maar zelfs een bijna optimale manier.
 \end{frame}
 
 \end{document}
