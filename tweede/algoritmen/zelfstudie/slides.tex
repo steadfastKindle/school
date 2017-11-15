@@ -727,12 +727,12 @@ Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: paral
 		Mat-Vec(A,X)
 		\begin{lstlisting}[style=CStyle]
 		
-		n = A.rows
-		init y als n-vector
-		parallel for i = 1 to n
-			for new j = 1 to n
-				$y_i = y_i + a_{ij}x_{j}$
-		return y
+n = A.rows
+init y als n-vector
+parallel for i = 1 to n
+	for new j = 1 to n
+		$y_i = y_i + a_{ij}x_{j}$
+return y
 		\end{lstlisting}
 		
 	\end{column}
@@ -773,12 +773,12 @@ Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: paral
 			Mat-Vec(A,X)
 			\begin{lstlisting}[style=CStyle]
 			
-			n = A.rows
-			init y als n-vector
-			parallel for i = 1 to n
-				for new j = 1 to n
-					$y_i = y_i + a_{ij}x_{j}$
-			return y
+n = A.rows
+init y als n-vector
+parallel for i = 1 to n
+	for new j = 1 to n
+		$y_i = y_i + a_{ij}x_{j}$
+return y
 			\end{lstlisting}
 			
 		\end{column}
@@ -792,20 +792,17 @@ Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: paral
 \begin{frame}[fragile]
 	\frametitle{Parallel loop span}
 	
-	Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: parallel for\\
-	\textit{Keyword}: new j = iedere iteratie eigen versie variabele j
-	
 	
 	
 	\begin{columns}[T] % align columns
 		
-		Compiler implementeert parallel loop als een divide en 
-		MOET JE DIT WEL WEL BESPREKEN DIT ALGORITME?????
 		
+			
 		\begin{column}{.3\textwidth}
 			\begin{minipage}[c][.6\textheight][c]{\linewidth}
 				
-				
+				\textbf{Span}:\\  alles dat parallel kan
+				 wordt parallel uitgevoerd.
 				
 			\end{minipage}
 		\end{column}
@@ -817,12 +814,12 @@ Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: paral
 			Mat-Vec-Main-Loop(A,X)
 			\begin{lstlisting}[style=CStyle]
 			
-			n = A.rows
-			init y als n-vector
-			parallel for i = 1 to n
-			for new j = 1 to n
-			$y_i = y_i + a_{ij}x_{j}$
-			return y
+n = A.rows
+init y als n-vector
+parallel for i = 1 to n
+	for new j = 1 to n
+		$y_i = y_i + a_{ij}x_{j}$
+return y
 			\end{lstlisting}
 			
 		\end{column}
@@ -832,6 +829,21 @@ Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: paral
 		
 		
 	\end{columns}
+	Doen alsof parallelle for er niet staat:\\
+	$\rightarrow$ enkel geneste for in parallel for telt.\\
+	$T_\infty (n) = \Theta(n)$
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Race conditions}
+	\textit{Een algoritme is}
+	\begin{description}
+		\item[\textbf{Deterministisch}]
+		Indien het hetzelfde doet (met zelfde input), onafhankelijk van scheduling.
+		\item[\textbf{Nondeterministisch}]
+		Indien uitvoering kan variëren per run.
+	\end{description}
 	
 \end{frame}
 
