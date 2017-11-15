@@ -25,7 +25,7 @@
 	showtabs=false,                  
 	tabsize=2,
 	language=C,
-	morekeywords={parallel, spawn, sync, new}
+	morekeywords={parallel, spawn, sync, new, to}
 }
 
 
@@ -842,16 +842,83 @@ return y
 		\item[\textbf{Deterministisch}]
 		Indien het hetzelfde doet (met zelfde input), onafhankelijk van scheduling.
 		\item[\textbf{Nondeterministisch}]
-		Indien uitvoering kan variëren per run.
+		Indien uitvoering kan variëren per run.\\
+		$\rightarrow$ Hierbij kunnen race-conditions ontstaan.
 	\end{description}
+	\pause
+	~\\~\\
+	\textit{NIET ONDERSCHATTEN:}
+	Therac-25 straling therapie doodde hierdoor 3 mensen.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Race conditions}
 	
+	\textbf{Determinacy race:}\\
+	Minstens 2 parallelle instructies gebruiken eenzelfde geheugenplaats EN minstens 1 overschrijft ze. \\
+	
+	\pause
+	\begin{columns}[T] % align columns
+		
+		
+		
+		\begin{column}{.48\textwidth}
+			\begin{minipage}[c][.5\textheight][c]{\linewidth}
+				
+				Print 1 indien
+				\begin{enumerate}
+					\item thread 1 haalt x in
+					\item thread 2 haalt x in
+					\item beiden incrementeren hun versie
+					\item Ze overschrijven beiden x met 1
+				\end{enumerate}
+				
+			\end{minipage}
+		\end{column}
+		
+		
+		
+		\begin{column}{.5\textwidth}
+			VB\\
+			Race-Example()
+			\begin{lstlisting}[style=CStyle]
+x = 0
+parallel for i = 1 to 2
+	x = x + 1
+print x
+			\end{lstlisting}
+			
+		\end{column}
+		
+		
+		
+		
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Race conditions}
+	Meerder oplossingen:
+	\\$\rightarrow$ Besturingssystemen (mutex, semaforen, monitors)\\
+	~\\~\\
+	Dit boek vermijd zulke situaties.
+	\\ (new zeer belangrijk hierbij)
+\end{frame}
+
+\begin{frame}
+	\frametitle{Running time bedriegt}
+	A chess lesson op p750 toont aan dat:\\~\\
+	Stel $Q << P.$\\
+	Ook al versnelt $T_Q$ door een `optimalisatie',\\
+	kan $T_P$ vertragen!
 \end{frame}
 
 \section[Matrix]{Matrix vermenigvuldiging}
 
 \begin{frame}
-	\frametitle{Frame-titel}
-	Tekst.
+	\frametitle{We zitn eindelijk ier}
+	Juplaa
 \end{frame}
 
 \section[Merge sort]{Merge sort}
