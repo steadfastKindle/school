@@ -1,16 +1,43 @@
-\frametitle{Vb met P-Fib}
-	P-Fib(n)
-	\begin{lstlisting}[style=CStyle]
-	if n <= 1
-	return n
-	else
-	x = spawn P-Fib(n-1)
-	y = P-Fib(n-2)
-	sync
-	return x + y
-	\end{lstlisting}
+\frametitle{Parallel loop span}
 
-	~\\In serie: $T(n) = T(n-1) + T(n-2) + \Theta(1)$ \\~\\
-	Work = $T_1 (n) = \Theta(\phi^n)$ uit vorige\\ met
-	$\phi = (1 + \sqrt{5})/2$ de `gouden ratio'
+	Loops waarvan de iteraties parallel kunnen uitvoeren. \\ \textit{Keyword}: parallel for\\
+	\textit{Keyword}: new j = iedere iteratie eigen versie variabele j
+
+
+
+	\begin{columns}[T] % align columns
+
+		Compiler implementeert parallel loop als een divide en
+		MOET JE DIT WEL WEL BESPREKEN DIT ALGORITME?????
+
+		\begin{column}{.3\textwidth}
+			\begin{minipage}[c][.6\textheight][c]{\linewidth}
+
+
+
+			\end{minipage}
+		\end{column}
+
+
+
+		\begin{column}{.65\textwidth}
+
+			Mat-Vec-Main-Loop(A,X)
+			\begin{lstlisting}[style=CStyle]
+
+			n = A.rows
+			init y als n-vector
+			parallel for i = 1 to n
+			for new j = 1 to n
+			$y_i = y_i + a_{ij}x_{j}$
+			return y
+			\end{lstlisting}
+
+		\end{column}
+
+
+
+
+
+	\end{columns}
 

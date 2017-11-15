@@ -4,6 +4,6 @@
 \beamer@sectionintoc {3}{Meeteenheden prestatie}{38}{0}{3}
 \beamer@sectionintoc {4}{Scheduling van threads}{57}{0}{4}
 \beamer@sectionintoc {5}{Analyseren van een algoritme}{72}{0}{5}
-\beamer@sectionintoc {6}{Matrix vermenigvuldiging}{80}{0}{6}
-\beamer@sectionintoc {7}{Merge sort}{82}{0}{7}
-\beamer@sectionintoc {8}{Besluit}{84}{0}{8}
+\beamer@sectionintoc {6}{Matrix vermenigvuldiging}{83}{0}{6}
+\beamer@sectionintoc {7}{Merge sort}{85}{0}{7}
+\beamer@sectionintoc {8}{Besluit}{87}{0}{8}
